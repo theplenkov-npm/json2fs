@@ -18,8 +18,8 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "npm pkg set bin=bin/run.js",
-          "shebangify bin/run.js node",
+          "npm pkg set bin=src/bin/run.js",
+          "shebangify src/bin/run.js node",
           "npm publish"
         ],
         "cwd": "dist/packages/json2fs"
