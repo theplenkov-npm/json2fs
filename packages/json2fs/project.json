@@ -32,7 +32,15 @@
       "options": {
         "lintFilePatterns": ["packages/json2fs/**/*.ts"]
       }
+    },
+    "version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version",
+        "cwd": "packages/json2fs"
+      }
     }
+
   },
   "tags": []
 }
