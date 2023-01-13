@@ -2,7 +2,10 @@
   "name": "json2fs",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build":"nx affected --target=build",
+    "publish":"nx affected --target=publish"
+  },
   "private": true,
   "dependencies": {
     "commander": "^9.5.0"
@@ -24,5 +27,5 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ]  
 }
