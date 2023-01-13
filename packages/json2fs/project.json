@@ -1,0 +1,38 @@
+{
+  "name": "json2fs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/json2fs/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/json2fs",
+        "main": "packages/json2fs/src/index.ts",
+        "tsConfig": "packages/json2fs/tsconfig.lib.json",
+        "assets": ["packages/json2fs/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npm pkg set bin=bin/run.js",
+          "shebangify bin/run.js node",
+          "npm publish"
+        ],
+        "cwd": "dist/packages/json2fs"
+      },
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/json2fs/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

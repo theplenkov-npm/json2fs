@@ -1,0 +1,8 @@
+{
+  "name": "json2fs",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "bin": {
+    "json2fs": "src/bin/run.ts"
+  }
+}
