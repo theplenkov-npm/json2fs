@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "license": "MIT",
   "scripts": {
-    "publish": "nx run-many --target=publish",
+    "nx:publish": "nx run-many --target=publish",
     "version": "nx affected --target=version --base=v${npm_old_version} ${npm_new_version} --workspaces-update=false && npm install --ignore-scripts --package-lock-only --fund=false --audit=false && git add -A "
   },
   "private": true,
