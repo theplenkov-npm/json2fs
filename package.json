@@ -2,9 +2,8 @@
   "name": "json2fs",
   "version": "0.0.1",
   "license": "MIT",
-  "scripts": {
-    "build": "nx affected --target=build",
-    "publish": "nx affected --target=publish"
+  "scripts": {    
+    "publish": "nx run-many --target=publish"
   },
   "private": true,
   "dependencies": {
