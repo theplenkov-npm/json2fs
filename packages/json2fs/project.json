@@ -11,7 +11,8 @@
         "outputPath": "dist/packages/json2fs",
         "main": "packages/json2fs/src/index.ts",
         "tsConfig": "packages/json2fs/tsconfig.lib.json",
-        "assets": ["packages/json2fs/*.md"]
+        "assets": ["packages/json2fs/*.md"],
+        "buildableProjectDepsInPackageJsonType": "dependencies"
       }
     },
     "publish": {
