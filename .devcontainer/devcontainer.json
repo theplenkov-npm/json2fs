@@ -12,7 +12,14 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"onCreateCommand": "yarn global add ts-node nx"
+	"onCreateCommand": "yarn global add ts-node nx",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens"
+			]
+		}
+	}
 	// "postCreateCommand": "yarn install",
 
 	// Configure tool-specific properties.

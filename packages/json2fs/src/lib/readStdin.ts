@@ -3,8 +3,7 @@ import * as readline from 'readline';
 export const readStdin = (): Promise<string> => {
   return new Promise((resolve, reject) => {
     const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
+      input: process.stdin
     });
 
     rl.setPrompt('');
