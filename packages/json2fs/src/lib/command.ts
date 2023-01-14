@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import { createNestedStructure } from './json2fs';
+import { readStdin } from './readStdin';
 import * as fs from 'fs';
 
 interface Options {
@@ -19,7 +20,7 @@ export default new Command()
             json_string = (await fs.promises.readFile(options.from)).toString();
         } else {
             //read stding
-            json_string = fs.readFileSync(process.stdin.fd).toString();
+            json_string = await readStdin();
         }
 
         const data = JSON.parse(json_string);
