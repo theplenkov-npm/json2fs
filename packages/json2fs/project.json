@@ -6,12 +6,16 @@
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/packages/json2fs",
         "main": "packages/json2fs/src/index.ts",
         "tsConfig": "packages/json2fs/tsconfig.lib.json",
-        "assets": ["packages/json2fs/*.md"],
+        "assets": [
+          "packages/json2fs/*.md"
+        ],
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }
     },
@@ -25,13 +29,19 @@
         ],
         "cwd": "dist/packages/json2fs"
       },
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/json2fs/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/json2fs/**/*.ts"
+        ]
       }
     },
     "version": {
@@ -41,7 +51,6 @@
         "cwd": "packages/json2fs"
       }
     }
-
   },
   "tags": []
 }

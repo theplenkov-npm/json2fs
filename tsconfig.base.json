@@ -3,20 +3,33 @@
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
+    "inlineSources": true,
+    //"inlineSourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "json2fs": ["packages/json2fs/src/index.ts"]
+      "json2fs": [
+        "packages/json2fs/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
