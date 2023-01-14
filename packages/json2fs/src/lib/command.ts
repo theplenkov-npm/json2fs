@@ -19,7 +19,8 @@ export default new Command()
         if (options.from) {
             json_string = (await fs.promises.readFile(options.from)).toString();
         } else {
-            //read stding
+            //read stdin
+            // as alternative is poosible to use https://www.npmjs.com/package/get-stdin package
             json_string = await readStdin();
         }
 
